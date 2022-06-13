@@ -1,0 +1,30 @@
+cloud:
+  aws:
+    stack:
+      auto: false
+    region:
+      static: us-east-1
+      auto: false
+    credentials:
+      access-key: FAKE
+      secret-key: FAKE
+    queue:
+      uri: http://localhost:4566
+      name: dashboard-queue
+      complete-uri: http://localhost:4566/000000000000/dashboard-queue
+server:
+  port: ${PORT:8082}
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    protocol: smtp
+    username: kathe9463@gmail.com
+    password: ${EMAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
